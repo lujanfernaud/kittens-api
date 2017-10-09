@@ -1,0 +1,12 @@
+<h2 class="mb-4"><%= @kitten.name %></h2>
+
+<p>Age: <%= @kitten.age %></p>
+<p>Cuteness: <%= @kitten.cuteness %></p>
+<p>Softness: <%= @kitten.softness %></p>
+
+<p class="mt-4">
+  <%= link_to "Edit", edit_kitten_path(@kitten) %> |
+    <%= link_to "Delete", kitten_path(@kitten), method: :delete %>
+</p>
+
+<p><%= link_to "Go back home", root_path %></p>

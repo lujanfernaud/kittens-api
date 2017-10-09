@@ -1,0 +1,33 @@
+<%= form_for @kitten do |f| %>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control", autofocus: true %>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="form-group">
+        <%= f.label :age %>
+        <%= f.number_field :age, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <%= f.label :cuteness %>
+        <%= f.text_field :cuteness, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <%= f.label :softness %>
+        <%= f.text_field :softness, class: "form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>

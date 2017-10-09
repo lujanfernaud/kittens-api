@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>KittensApi</title>
+    <title>Kittens!</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,23 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <%= render "header" %>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+          <% flash.each do |message_type, message| %>
+            <%= content_tag :div, message,
+              class: "alert alert-#{message_type} mb-3" %>
+          <% end %>
+
+          <%= yield %>
+
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
